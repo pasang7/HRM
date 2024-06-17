@@ -1,0 +1,866 @@
+@media screen and (max-width: 1199px) {
+    .attendance-btn {
+        text-transform: capitalize;
+        /*width: 90%;*/
+    }
+
+    .attendance-btn {
+        width: 130px;
+    }
+
+    .attendance-title {
+        font-size: 15px;
+    }
+
+    .priority-check span {
+        margin-top: 0;
+        padding: 0.3rem 0.5rem;
+        font-size: 12px;
+    }
+
+    .clear-completed,
+    .clear-all {
+        font-size: 14.5px;
+    }
+
+    .card-title {
+        font-size: 14px;
+    }
+
+    .profile-pic {
+        width: 120px;
+        height: 120px;
+    }
+
+    .profile-pic-upload h2 {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .request-btn {
+        font-size: 15px;
+    }
+
+    .custom-select-wrapper select,
+    .custom-form-group input,
+    .custom-form-group textarea {
+        font-size: 15px;
+    }
+
+    .btn-add-tasks {
+        font-size: 13px;
+    }
+
+    .clear-completed,
+    .clear-all {
+        font-size: 14px;
+    }
+
+    .attendance-btn {
+        width: 120px;
+    }
+
+    .priority-check span {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .attendance-btn {
+        text-transform: capitalize;
+        /*width: 100%;*/
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .attendance-btn {
+        padding: 0.375rem 0.5rem;
+    }
+
+    .event-list-wrapper {
+        padding-top: 1.5rem;
+    }
+
+    .report-deadline {
+        padding-top: 1.5rem;
+    }
+
+    .leave-request {
+        padding-bottom: 1rem;
+    }
+
+    .old-attendance-wrapper {
+        margin-top: 1rem;
+    }
+
+    .old-attendance-wrapper .margin-top-1 {
+        margin-top: 0;
+    }
+
+    .shift button {
+        padding: 0.3rem 0.75rem;
+    }
+
+    .shift i {
+        font-size: 10px;
+    }
+
+    .btn-edit,
+    .btn-change-holiday {
+        margin-bottom: 0.5rem;
+    }
+
+    .profile-pic {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .form-wrapper {
+        width: 60%;
+        margin-bottom: 1rem;
+    }
+
+    .form-logo-wrapper {
+        width: 80px;
+        height: 80px;
+    }
+
+    .btn-enter {
+        padding: 0.35rem 1.5rem;
+    }
+
+    .logo-bottom-wrapper {
+        width: 150px;
+        height: 38px;
+    }
+
+    .attendance-title {
+        font-size: 16px;
+    }
+
+    .custom-select-wrapper select,
+    .custom-form-group input,
+    .custom-form-group textarea {
+        font-size: 14px;
+    }
+
+    .btn-add-tasks {
+        font-size: 14px;
+    }
+
+    .btn-add-tasks i {
+        font-size: 12px;
+    }
+
+    .clear-completed,
+    .clear-all {
+        font-size: 16px;
+    }
+
+    .pin-confirmation p {
+        font-size: 14px;
+        margin-bottom: 0.2rem;
+    }
+
+    .contact-admin {
+        padding-top: 0.5rem;
+    }
+
+    .profile-pic-upload h2 {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .mobile-view-header {
+        display: block !important;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 999;
+    }
+
+    .mobile-view-header .navbar {
+        height: 60px;
+    }
+
+    .desktop-view-header {
+        display: none;
+    }
+
+    .menu-items-wrapper {
+        display: none;
+    }
+
+    .view-profile {
+        width: 128px;
+        margin: auto;
+    }
+
+    .main-content {
+        width: 100%;
+        margin-left: 0;
+        padding: 30px 16px;
+        margin-top: 90px;
+    }
+
+    .navbar-primary {
+        display: none;
+    }
+
+    .menu-items-list {
+        top: 0;
+        z-index: 999;
+        overflow-y: scroll;
+        max-height: 65vh;
+        /* border-bottom: 2px solid blue; */
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+    }
+
+    /*.mobile-menu-btn .collapsed{
+		-webkit-transition: all .3s ease-in-out;
+  		-moz-transition: all .3s ease-in-out;
+  		transition: all .3s ease-in-out;
+	}*/
+    .menu-items-list .show {
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .form-wrapper {
+        width: 75%;
+        margin-bottom: 2rem;
+    }
+
+    .bottom-section-content {
+        bottom: 1%;
+        right: 1%;
+    }
+
+    .mobile-submenu-list {
+        position: absolute;
+        width: 100%;
+        top: 8px;
+        left: 0px;
+    }
+
+    .report-link a:hover,
+    .report-link a:focus,
+    .report-link a:active {
+        border-left: 0 !important;
+        background-color: #d6d6d6 !important;
+    }
+
+    .header-form span {
+        padding-left: 7px;
+        max-width: 120px;
+    }
+
+    .margin-bottom-22 {
+        margin-bottom: 17px;
+    }
+
+    .header-form a {
+        font-size: 12px;
+    }
+
+    .header-form input {
+        font-size: 12px;
+        padding: 0.25rem 0.5rem;
+    }
+
+    .header-form span button {
+        padding: 0.25rem 1rem;
+        font-size: 12px;
+    }
+
+    .leave-request {
+        padding-bottom: 1rem;
+    }
+
+    .navbar-brand {
+        max-width: 120px;
+    }
+
+    .mobile-menu-btn {
+        padding: 0.25rem 0 !important;
+    }
+
+    .mobile-menu-btn:hover,
+    .mobile-menu-btn:focus,
+    .mobile-menu-btn:active {
+        outline: none !important;
+        box-shadow: none !important;
+    }
+
+    .btn-add-tasks i {
+        font-size: 12px;
+    }
+
+    .btn-add-tasks {
+        margin-top: 1rem;
+    }
+
+    .bottom-section-content p {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .form-wrapper {
+        width: 70%;
+    }
+
+    .mobile-login {
+        display: block;
+    }
+
+    .desktop-login {
+        display: none;
+    }
+
+    .clockin-navbar {
+        height: 60px !important;
+    }
+
+    .clockin-wrapper {
+        top: 60px;
+        min-height: calc(100vh - 60px);
+    }
+
+    .attendance-btn {
+        width: 134px;
+    }
+
+    .attendance-table th:first-child,
+    .attendance-table td:first-child {
+        display: none;
+    }
+
+    .fc-view-container {
+        font-size: 12px;
+    }
+
+    .fc-row:first-child table > thead > tr > th {
+        padding: 0.5rem 0.35rem !important;
+    }
+
+    .fc-row table > thead > tr > td {
+        padding: 0.35rem 0.35rem !important;
+    }
+
+    .event-list ul li span:first-child {
+        font-size: 13px;
+    }
+
+    .event-list ul li span {
+        font-size: 14px;
+    }
+
+    .request-btn {
+        font-size: 14px;
+    }
+
+    .custom-form-control {
+        font-size: 14px;
+    }
+
+    .leave-request {
+        padding-top: 0rem;
+    }
+
+    .btn-create {
+        font-size: 14px;
+    }
+
+    .to-do-details .custom-form-group {
+        padding-bottom: 1rem !important;
+    }
+
+    .btn-add-tasks {
+        font-size: 13px;
+    }
+
+    .clear-completed,
+    .clear-all {
+        font-size: 14px;
+    }
+
+    .margin-top-1-mob {
+        margin-top: 1rem;
+    }
+
+    .hidden-text {
+        min-height: 2px;
+        color: #707070 !important;
+        padding-left: 4px;
+    }
+
+    .form-logo-wrapper {
+        width: 75px;
+        height: 75px;
+    }
+
+    .logo-bottom-wrapper {
+        width: 145px;
+        height: 30px;
+    }
+
+    .contact-admin {
+        font-size: 13px;
+    }
+
+    .mobile-menu span {
+        width: 24px;
+        margin-bottom: 4px;
+    }
+
+    .btn-clockin-white,
+    .btn-clockout-white,
+    .btn-logout {
+        font-size: 12.5px;
+    }
+
+    .back-link {
+        font-size: 12px;
+    }
+
+    /*.back-btn{
+	  font-size: 12.5px!important;
+	}*/
+    .report-deadline:last-child {
+        margin-bottom: 0;
+    }
+
+    .huser-name {
+        display: none;
+    }
+
+    .personal-details-wrapper {
+        margin-top: 2rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .form-logo-wrapper {
+        width: 70px;
+        height: 70px;
+    }
+
+    .pin-confirmation {
+        padding-top: 0.2rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .form-wrapper {
+        width: 85%;
+    }
+
+    .logo-bottom-wrapper {
+        width: 146px;
+        height: 32px;
+    }
+
+    .attendance-btn {
+        width: 100px;
+        font-size: 13px;
+    }
+
+    .form-logo-wrapper {
+        width: 60px;
+        height: 60px;
+    }
+
+    .form-wrapper {
+        margin-bottom: 3rem;
+    }
+
+    .pin-confirmation p {
+        font-size: 13px;
+    }
+
+    .calendar-title h2 {
+        font-size: 14px;
+    }
+
+    .fc-toolbar h2,
+    .event-list-wrapper .card .card-header p {
+        font-size: 13px !important;
+    }
+
+    .event-list ul li span:first-child,
+    .event-list ul li span {
+        font-size: 12px;
+    }
+
+    .btn-add-holiday i,
+    .btn-today i {
+        font-size: 10px;
+        padding-right: 2px;
+    }
+
+    .time-countdown {
+        padding-right: 0;
+        font-size: 14px;
+    }
+
+    .btn-logout {
+        margin-left: 6px;
+    }
+
+    .btn-clockin-white,
+    .btn-clockout-white {
+        margin-left: 6px;
+    }
+
+    .btn-clockin-white,
+    .btn-clockout-white,
+    .btn-logout,
+    .back-link {
+        padding: 1px 5px;
+        font-size: 12px;
+        line-height: 1.5;
+        border-radius: 3px;
+    }
+
+    .back-btn i {
+        font-size: 12px;
+    }
+
+    .back-btn {
+        margin-left: 6px;
+        line-height: 1;
+    }
+}
+
+@media (min-width: 100px) and (max-width: 1000px) {
+    .collapsed + .main-content {
+        margin-left: 0;
+        padding: 0;
+    }
+
+    .hrProFlexGrp {
+        display: flex;
+        flex: 1;
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+
+    .hrDashboardData,
+    .hrProRightSummary {
+        flex: 1;
+    }
+
+    .hrDashboardData .pr-0,
+    .hrDashboardData .px-0 {
+        padding-right: 15px !important;
+    }
+
+    .hrProRightSummary {
+        border-radius: 0;
+        margin-top: 40px;
+    }
+
+    .dropdown-toggle::after {
+        display: none;
+    }
+
+    .mobileNavBar {
+        background-color: var(--main_header_color) !important;
+        padding: 15px;
+    }
+
+    .sidebarInnerGrp svg {
+        width: 15px;
+        height: 15px;
+        margin-right: 7px;
+    }
+
+    .menuIcon svg {
+        color: #1e3070;
+        margin-right: 10px;
+    }
+
+    .dropdown-menu .dropdown-item,
+    .dropdown-menu li > a {
+        font-size: 13px;
+        padding: 4px;
+    }
+
+    .userinfoDrop h6 {
+        font-size: 14px;
+    }
+
+    .userinfoDrop {
+        margin-left: 10px;
+    }
+
+    .dropdown-item svg {
+        width: 15px;
+        height: 15px;
+    }
+
+    .newHrBreadCumb h5 {
+        margin-bottom: 20px;
+    }
+
+    .staffButtonGrp {
+        margin-right: 15px;
+    }
+
+    .mobile-view-header .dropdown-item {
+        font-size: 13px;
+        padding: 5px 10px;
+    }
+
+    .mobile-view-header .dropdown-menu {
+        position: absolute;
+        transform: translate3d(-110px, 40px, 0px);
+        top: 10px;
+        left: unset;
+        will-change: transform;
+        width: 200px;
+        right: -100px;
+    }
+
+    .menu-items-list {
+        top: 0;
+        z-index: 999;
+        position: relative;
+        overflow-y: scroll;
+        max-height: 100vh;
+        /* border-bottom: 2px solid blue; */
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        height: 100%;
+    }
+
+    /* width */
+    .menu-items-list::-webkit-scrollbar {
+        width: 0px;
+    }
+
+    /* Track */
+    .menu-items-list::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+
+    /* Handle */
+    .menu-items-list::-webkit-scrollbar-thumb {
+        background: #888;
+    }
+
+    /* Handle on hover */
+    .menu-items-list::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+
+    .report-link a:hover,
+    .report-link a:focus,
+    .report-link a:active {
+        background-color: #1e3070 !important;
+    }
+
+    .hrproTableHead .justify-content-between {
+        flex-direction: column;
+    }
+
+    .hrproTableHead .align-items-center {
+        align-items: flex-start !important;
+    }
+
+    .recButon i {
+        display: none;
+    }
+
+    .hrproTableHead .btn-sm {
+        font-size: 11px;
+        padding: 7px;
+    }
+
+    .hrproTableHead h5 {
+        margin-bottom: 10px !important;
+    }
+
+    .smallLogInBg {
+        background-image: url(../images/1bg.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100vh;
+    }
+
+    .smallLogInner {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 15px;
+        background-color: rgba(30, 48, 112, 0.15);
+    }
+
+    .largeScreen {
+        display: none;
+    }
+
+    .smallScreen {
+        display: block;
+    }
+
+    .loginBg {
+        background-color: #fff;
+        padding: 18px;
+    }
+
+    .loginFlex {
+        flex-direction: column;
+    }
+
+    .loginBg h4 {
+        font-weight: 800;
+        font-size: 24px;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+        color: #212121;
+        text-align: center;
+    }
+
+    .loginInfo {
+        flex: 1;
+        padding: 100px 15px;
+    }
+
+    .navbar-brand {
+        max-width: 120px;
+        width: 120px;
+        height: 50px;
+    }
+
+    .navbar-brand img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .loginLogo {
+        width: 170px;
+        margin: 0 auto 10px auto;
+    }
+
+    .loginLogo img {
+        width: 100%;
+        object-fit: contain;
+    }
+
+    .attendance-table th:first-child,
+    .attendance-table td:first-child {
+        display: block;
+    }
+
+    .loginBg {
+        width: 90%;
+    }
+
+    .navbar-expand-md .navbar-nav {
+        align-items: flex-end !important;
+    }
+
+    .navbar-nav .nav-link {
+        padding: 0 !important;
+
+        color: #212121;
+        font-size: 15px;
+        margin: 20px 0;
+    }
+
+    button:focus {
+        outline: 0px solid !important;
+    }
+
+    .navbar-toggler {
+        padding: 0;
+        color: #1e3070;
+    }
+
+    .navbar svg {
+        color: #1e3070;
+    }
+
+    .navbar .btn-primary svg {
+        color: #fff !important;
+    }
+
+    .navbar .btn-primary {
+        margin-bottom: 20px;
+    }
+
+    /*.loginTableBg .d-flex {*/
+    /*    flex-direction: column;*/
+    /*}*/
+
+    /*.loginTableBg .align-items-center {*/
+    /*    align-items: flex-start !important;*/
+    /*}*/
+
+    /*.searchBox {*/
+    /*    width: 100%;*/
+    /*    margin-top: 10px;*/
+    /*}*/
+
+    /*#attendance-user-list .d-flex {*/
+    /*    flex-direction: row;*/
+    /*}*/
+
+    /*#attendance-user-list .align-items-center {*/
+    /*    align-items: center !important;*/
+    /*}*/
+
+    .poweredByLogo {
+        position: fixed;
+    }
+
+    /* .loginInfo {
+        display: none;
+    } */
+    .newHrFormGrp {
+        margin-top: 20px;
+    }
+
+    .hrDashboardData .pr-2,
+    .hrDashboardData .pl-2 {
+        padding: 0 15px !important;
+    }
+
+    .presentBg,
+    .absentBg {
+        margin-bottom: 20px;
+    }
+
+    .lds-roller {
+
+        height: 100vh;
+        width: 80%;
+    }
+
+    .loginWrapper {
+        overflow: hidden;
+    }
+    .loginTableBg
+    .attendance-btn{
+        width: unset !important;
+        margin: 0;
+    }
+}
+
+@media (min-width: 1899px) {
+    .custom-navbar {
+        padding-left: 5%;
+    }
+}

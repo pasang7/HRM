@@ -1,0 +1,151 @@
+@extends('layouts.layout')
+@section('title', 'Request Leave')
+
+@section('content')
+    <div class="newHrProTableGrp">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="newHrBreadCumb">
+                        <h5>Leave Form</h5>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="newHrFormGrp bg-lgrey">
+                        <form autocomplete="off" method="POST" action="{{ route('leave.store') }}"
+                            enctype="multipart/form-data">
+                            @csrf
+
+                            <div class="row">
+                                <div class="col-lg-12 col-sm-12">
+                                    <div class="custom-form-wrapper">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="hdetails-wrapper">
+                                                    <div class="row">
+                                                        <input type="hidden" name="user_id" value="{{ $user->id }}"
+                                                            required>
+                                                        <div class="form-group col-lg-4 col-sm-12">
+                                                            <label>Employee Name</label>
+                                                            <input type="text" class="form-control custom-form-control"
+                                                                value="{{ $user->name }}" readonly>
+                                                        </div>
+                                                        <div class="col-lg-4 col-md-4 col-sm-12 form-group">
+                                                            <label>Designation</label>
+                                                            <input type="text" class="form-control custom-form-control"
+                                                                placeholder="Full Name"
+                                                                value="{{ $user->userDesignation->name }}" readonly>
+                                                        </div>
+                                                        <div class="col-lg-4 col-sm-12">
+                                                            <div class="form-group">
+                                                                <label class="required">Select your
+                                                                    Shift</label>
+                                                                <select name="shift_id"
+                                                                    class="form-control custom-form-control"
+                                                                    placeholder="Shifts">
+                                                                    @foreach ($user->department->shifts as $s => $shift)
+                                                                        <option value="{{ $shift->id }}">
+                                                                            {{ date('h:i A', strtotime($shift->clockin)) }}
+                                                                            to
+                                                                            {{ date('h:i A', strtotime($shift->clockout)) }}
+                                                                        </option>
+                                                                    @endforeach
+                                                                </select>
+                                                                @error('shift_id')
+                                                                    <small
+                                                                        class="form-text text-danger">{{ $message }}</small>
+                                                                @enderror
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6 col-sm-12 form-group">
+                                                            <label for="from" class="required">From</label>
+                                                            <input type="text" name="start" id="start_from"
+                                                                class="form-control custom-form-control"
+                                                                placeholder="Start From" value="{{ old('from') }}">
+                                                            @error('from')
+                                                                <small class="form-text text-danger">{{ $message }}</small>
+                                                            @enderror
+                                                        </div>
+                                                        <div class="col-lg-6 col-sm-12 form-group">
+                                                            <label for="to" class="required">To</label>
+                                                            <input type="text" name="end" id="end_to"
+                                                                class="form-control custom-form-control"
+                                                                placeholder="End To" value="{{ old('to') }}">
+                                                            @error('to')
+                                                                <small
+                                                                    class="form-text text-danger">{{ $message }}</small>
+                                                            @enderror
+                                                        </div>
+                                                        <div class="col-lg-6 col-sm-12 form-group">
+                                                            <label for="leave_type" class="required">Choose
+                                                                Leave</label>
+                                                            <select name="leave_type"
+                                                                class="form-control custom-form-control"
+                                                                placeholder="Leave Type" required>
+                                                                @foreach ($user->leave_types as $type)
+                                                                    <option value="{{ $type->leave_type->id }}">
+                                                                        {{ $type->leave_type->name }}
+                                                                    </option>
+                                                                @endforeach
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-lg-6 col-sm-12 form-group">
+                                                            <label for="leave_type_full" class="required">Leave
+                                                                Type</label>
+                                                            <br>
+                                                            <div class="form-check form-check-inline">
+                                                                <input class="form-check-input" type="radio"
+                                                                    name="leave_type_full" id="holidayTypeFull" value="1"
+                                                                    checked>
+                                                                <label class="form-check-label"
+                                                                    for="holidayTypeFull">Full</label>
+                                                            </div>
+                                                            <div class="form-check form-check-inline">
+                                                                <input class="form-check-input" type="radio"
+                                                                    name="leave_type_full" id="holidayTypeHalf" value="0">
+                                                                <label class="form-check-label"
+                                                                    for="holidayTypeHalf">Half</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-12 col-sm-12 form-group">
+                                                            <label for="description" class="required">Reason</label>
+                                                            <textarea name="description" class="form-control custom-form-control" placeholder="Reason for leave"
+                                                                required>{{ old('description') }}</textarea>
+                                                            @error('description')
+                                                                <small
+                                                                    class="form-text text-danger">{{ $message }}</small>
+                                                            @enderror
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="btn-create-wrapper d-flex justify-content-end">
+
+                                            <button type="submit" style="--main_header_color : {{ $settings->main_header_color }};" class="btn btn-primary btn-sm btn-create"><i data-feather="send"></i>Request Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+@endsection
+@section('css')
+    <style type="text/css">
+        .required:after {
+            content: " *";
+            color: red;
+        }
+
+    </style>
+
+@endsection

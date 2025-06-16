@@ -3,7 +3,6 @@ services:
     name: hrm-laravel
     env: docker
     plan: free
-    # Dockerfile commands will be used, so no buildCommand/startCommand here
     envVars:
       - key: APP_ENV
         value: production
@@ -25,3 +24,4 @@ services:
         value: "false"
       - key: LOG_CHANNEL
         value: stack
+    preDeployCommand: php artisan migrate --force

@@ -1,7 +1,7 @@
-# Use official PHP 7.4 Apache image (Laravel 6 supports PHP 7.2+, 7.4 is a safe choice)
+# Use official PHP 7.4 Apache image
 FROM php:7.4-apache
 
-# Install system dependencies and PHP extensions needed by Laravel + your composer.json packages
+# Install system dependencies and PHP extensions, including gd with JPEG & FreeType support
 RUN apt-get update && apt-get install -y \
     git \
     unzip \
@@ -10,26 +10,31 @@ RUN apt-get update && apt-get install -y \
     libonig-dev \
     libxml2-dev \
     zip \
-    && docker-php-ext-install pdo_mysql zip mbstring xml \
-    && a2enmod rewrite
+    libfreetype6-dev \
+    libjpeg62-turbo-dev \
+    libpng-dev \
+    && docker-php-ext-configure gd --with-freetype --with-jpeg \
+    && docker-php-ext-install gd pdo_mysql zip mbstring xml \
+    && a2enmod rewrite \
+    && apt-get clean && rm -rf /var/lib/apt/lists/*
 
-# Install composer globally
+# Install composer (copy from official composer image)
 COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 
-# Set working directory inside container
+# Set working directory
 WORKDIR /var/www/html
 
-# Copy app files to container
+# Copy project files to container
 COPY . /var/www/html
 
-# Run composer install (no dev dependencies, optimized autoloader)
+# Install PHP dependencies via composer
 RUN composer install --no-dev --optimize-autoloader
 
-# Set permissions for Laravel storage and cache directories
+# Set permissions for storage and cache folders
 RUN chown -R www-data:www-data storage bootstrap/cache
 
-# Expose port 80
+# Expose port 80 for Apache
 EXPOSE 80
 
-# Start Apache in foreground
+# Start Apache server
 CMD ["apache2-foreground"]

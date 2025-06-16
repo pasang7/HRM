@@ -16,7 +16,7 @@ use Carbon\Carbon;
 use DateInterval;
 use DatePeriod;
 
-class SalarySheetController extends Controller
+class SalarySheetControllercopy extends Controller
 {
     public function salarySheet(Request $request){
         $companySetting = CompanySetting::find(1);

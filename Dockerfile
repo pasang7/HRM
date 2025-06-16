@@ -1,7 +1,7 @@
 # Use official PHP 7.4 Apache image
 FROM php:7.4-apache
 
-# Install system dependencies and PHP extensions, including gd with JPEG & FreeType support
+# Install system dependencies and PHP extensions
 RUN apt-get update && apt-get install -y \
     git \
     unzip \
@@ -24,17 +24,28 @@ COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 # Set working directory
 WORKDIR /var/www/html
 
-# Copy project files to container
+# Copy project files
 COPY . /var/www/html
 
-# Install PHP dependencies via composer
-RUN composer install --no-dev --optimize-autoloader
+# Allow running composer as root
+ENV COMPOSER_ALLOW_SUPERUSER=1
 
-# Set permissions for storage and cache folders
+# Set temporary environment variables to skip DB connection during composer install
+ENV APP_ENV=local
+ENV DB_CONNECTION=null
+
+# Install PHP dependencies but skip scripts (avoid DB connection errors)
+RUN composer install --no-dev --optimize-autoloader --no-scripts
+
+# Set correct permissions
 RUN chown -R www-data:www-data storage bootstrap/cache
 
-# Expose port 80 for Apache
+# Copy entrypoint script
+COPY docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
+RUN chmod +x /usr/local/bin/docker-entrypoint.sh
+
+# Expose port 80
 EXPOSE 80
 
-# Start Apache server
-CMD ["apache2-foreground"]
+# Use entrypoint script to run artisan package:discover and start Apache
+ENTRYPOINT ["docker-entrypoint.sh"]

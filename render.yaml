@@ -2,22 +2,26 @@ services:
   - type: web
     name: hrm-laravel
     env: docker
-    dockerfilePath: Dockerfile
     plan: free
+    # Dockerfile commands will be used, so no buildCommand/startCommand here
     envVars:
       - key: APP_ENV
         value: production
       - key: APP_KEY
-        value: base64:qXdVuu5VbDBxnsBjl5cTULN6WRnqaFtq4BHGacs6pTA=
+        generateValue: true
       - key: DB_CONNECTION
         value: mysql
       - key: DB_HOST
         value: tramway.proxy.rlwy.net
       - key: DB_PORT
-        value: 13864
+        value: "13864"
       - key: DB_DATABASE
         value: railway
       - key: DB_USERNAME
         value: root
       - key: DB_PASSWORD
         value: kXaenOYGCHwhRqjTWcojJQrHOMFiPfYi
+      - key: APP_DEBUG
+        value: "false"
+      - key: LOG_CHANNEL
+        value: stack

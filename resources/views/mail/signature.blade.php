@@ -3,7 +3,7 @@
         <table>
             <tr>
                 <td class="content footer" align="center">
-                    <p>Sent via Hr Pro</p>
+                    <p>Sent via HRM</p>
                     <p><a href="https://www.pocketstudionepal.com">Pocket Studio</a> </p>
                 </td>
             </tr>

@@ -10,7 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>HR PRO</title>
+    <title>HRM</title>
     <!-- Bootstrap CSS CDN -->
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('/theme/images/logo-small.png') }}">
     <link rel="stylesheet" href="{{ asset('theme/css/bootstrap.min.css') }}">

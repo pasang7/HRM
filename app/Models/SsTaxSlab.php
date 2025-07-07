@@ -15,7 +15,7 @@ class SsTaxSlab extends Model
         parent::boot();
         static::creating(function($model)
         {
-            $model->created_by = Auth::user()->id;
+            $model->created_by = 1;
         });
     }
 }

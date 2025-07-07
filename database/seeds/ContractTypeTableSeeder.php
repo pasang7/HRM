@@ -14,11 +14,10 @@ class ContractTypeTableSeeder extends Seeder
     public function run()
     {
         collect([
-            'Fixed',
-            'Temporary',
-            'Rolling',
-            'Probation',
-            'Project Based',
+            'Full Time',
+            'Part Time',
+            'Casual',
+            'Contract or Project Based',
             ])->each(function($name){
                 factory(ContractType::class, 1)->create([
                     'name' => $name,

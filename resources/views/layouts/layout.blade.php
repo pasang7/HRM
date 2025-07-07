@@ -195,7 +195,7 @@
         <div class="col-md-12 text-right">
             <div class="copyrightFooter">
                 <a href="https://pocketstudionepal.com/" target="_blank">
-                    Powered By: Pocket Studio
+                    Powered By: Pasang Yangji
                 </a>
             </div>
         </div>

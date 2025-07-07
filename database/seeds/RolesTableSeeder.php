@@ -44,9 +44,15 @@ class RolesTableSeeder extends Seeder
     ]);
     Role::create([
         'id' => 6,
-        'name'=>'Intern',
-        'slug'=>'intern',
-        'is_active'=>'no'
+        'name'=>'Office Driver',
+        'slug'=>'office-driver',
+        'is_active'=>'yes'
+    ]);
+    Role::create([
+        'id' => 7,
+        'name'=>'Office Support',
+        'slug'=>'office-support',
+        'is_active'=>'yes'
     ]);
     }
 }

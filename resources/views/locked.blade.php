@@ -54,7 +54,7 @@
         <div class="logo-bottom-wrapper">
           <img src="{{ asset('theme/images/logo-big.png') }}">
         </div>
-        <p>Powered by Pocket Studio</p>
+        <p>Powered by Pasang Yangji</p>
       </div>
     </div>
   </div>

@@ -13,11 +13,11 @@ class CompanySettingSeeder extends Seeder
     public function run()
     {
         CompanySetting::create([
-            'name'=>'Pocket Studio',
-            'website'=>'https://www.pocketstudionepal.com/',
-            'address'=> 'Naxal-Narayanchaur, Kathmandu',
+            'name'=>'Example Company',
+            'website'=>'examplewebsite.com',
+            'address'=> 'Kathmandu Nepal',
             'phone'=>'977-1-1234567',
-            'email'=>'info@pocketstudionepal.com',
+            'email'=>'contact@examplewebsite.com',
             'min_leave_days_for_review'=> '1',
             'normal_overtime_rate'=> '1.5',
             'day_in_month'=>30,

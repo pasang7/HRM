@@ -11,7 +11,7 @@ $factory->define(User::class, function (Faker $faker) {
     return [
         'employee_id' => EmployeeId::create(['employee_id' => (string) $faker->unique()->numberBetween(1000, 9999)])->employee_id,
         'name' => $faker->name,
-        'gender' => rand(1, 2),
+        'gender' => rand(0, 1),
         'role' => 5, // Default, override in seeder
         'department_id' => 1, // Override in seeder
         'designation' => 5,

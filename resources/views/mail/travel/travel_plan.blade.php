@@ -171,7 +171,7 @@
                 <td>
                     <h5
                         style="font-weight: 700; color: #212121; font-size: 23px;text-transform: uppercase;margin: 8px 0;">
-                        Pocket Studio
+                        Pasang Yangji
                     </h5>
                     <p style="font-size:16px;">Naxal, Narayanchaur</p>
                 </td>
